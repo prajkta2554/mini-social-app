@@ -1,0 +1,318 @@
+/* 🔥 GLOBAL FIX */
+* {
+  box-sizing: border-box;
+}
+
+
+/* 🔵 Full screen center */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* 🟣 Card */
+.signup-box {
+  width: 340px;
+  background: white;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* 🟡 Heading */
+.signup-box h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* 🟢 Input boxes */
+.input-box {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+
+  border-radius: 12px;
+  border: 1px solid #ccc;
+
+  font-size: 14px;
+  outline: none;
+
+  /* 🔥 FIX overflow */
+  box-sizing: border-box;
+
+  transition: 0.3s;
+}
+
+/* ✨ Focus effect */
+.input-box:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 6px rgba(37, 117, 252, 0.3);
+}
+
+/* 🔴 Button */
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover */
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 🔵 Footer text */
+.signup-box p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* 🔗 Link */
+.signup-box a {
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Feed container */
+/* Create Post Card */
+.create-post {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Textarea */
+.post-textarea {
+  width: 100%;
+  min-height: 80px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Image Preview */
+.preview-img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+/* Bottom bar */
+.post-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* File button */
+.file-btn {
+  background: #f1f2f6;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Post button */
+.post-submit {
+  background: #2ed573;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.feed-container {
+  width: 420px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Header */
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logout-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Post Card */
+.post-card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* User */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Follow button */
+.follow-btn {
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Text */
+.post-text {
+  margin: 10px 0;
+}
+
+/* Image */
+.post-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+/* Actions */
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.post-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.likes-list {
+  font-size: 13px;
+  color: gray;
+  margin-top: 5px;
+}
+
+.comments {
+  margin-top: 8px;
+}
+
+.comments p {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 480px) {
+
+  .signup-container {
+    padding: 10px;
+    height: auto; /* 🔥 remove extra scroll */
+  }
+
+  .signup-box {
+    width: 100%;
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .feed-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .post-card {
+    padding: 12px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .post-textarea {
+    font-size: 13px;
+  }
+
+  .post-actions button {
+    font-size: 13px;
+  }
+}
+
+/* 📲 TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .feed-container {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .signup-box {
+    max-width: 380px;
+  }
+}
+
+/* 💻 DESKTOP */
+@media (min-width: 769px) {
+
+  .feed-container {
+    max-width: 500px;
+  }
+}
+
