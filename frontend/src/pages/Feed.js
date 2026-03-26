@@ -26,7 +26,7 @@ function Feed() {
     } else {
       fetchPosts();
     }
-  }, []);
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.clear();
