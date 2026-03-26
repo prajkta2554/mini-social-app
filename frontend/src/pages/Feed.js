@@ -9,10 +9,15 @@ function Feed() {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const res = await API.get("/posts");
-    setPosts(res.data);
+    try {
+      const res = await API.get("/posts");
+      setPosts(res.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const token = localStorage.getItem("token");
 
